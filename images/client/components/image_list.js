@@ -12,8 +12,8 @@ const ImageList = () => {
   const RenderedImages = IMAGES.map(image => {
     return (
       <ImageDetail
-        title={image.title}
-        link={image.link}
+        key={image.title}
+        image={image}
       />
     )
   });
