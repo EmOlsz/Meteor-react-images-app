@@ -1,21 +1,23 @@
 import React from 'react';
 import ImageDetail from './image_detail';
 
-const IMAGES = [
-  { title: 'One', link: 'https://dummyimage.com/200x125' },
-  { title: 'Two', link: 'https://dummyimage.com/200x125' },
-  { title: 'Three', link: 'https://dummyimage.com/200x125' }
-];
+const ImageList = (props) => {
 
-const ImageList = () => {
+  const { images } = props;
 
-  const RenderedImages = IMAGES.map(image => {
-    return (
-      <ImageDetail
-        key={image.title}
-        image={image}
-      />
-    )
+  console.log(images);
+
+  const RenderedImages = images
+    .filter(image => {
+      return !image.is_album
+    })
+    .map(image => {
+      return (
+        <ImageDetail
+          key={image.id}
+          image={image}
+        />
+      )
   });
 
   return (

@@ -1,0 +1,23 @@
+img {
+    max-width: 500px;
+}
+
+.progress-bar {
+    width: 50%;
+    height: 50px;
+    background: none;
+}
+
+.ups, .downs {
+    display: inline-block;
+    height: 100%;
+    opacity: .8;
+}
+
+.ups {
+    background: #378B2E;
+}
+
+.downs {
+    background: #AA4C39;
+}
